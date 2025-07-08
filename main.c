@@ -6,7 +6,7 @@ void delay_ms(unsigned int ms) {
         for (j = 0; j < 1275; j++);  // Approximate 1ms delay
 }
 
-// 7-segment codes for digits 0–9 (Common Cathode)
+// 7-segment codes for digits 0â€“9 (Common Cathode)
 // Format: g-f-e-d-c-b-a (P2.6 to P2.0)
 unsigned char seg_codes[10] = {
     0x3F,  // 0 ? 0011 1111
@@ -26,8 +26,8 @@ void main() {
 
     while (1) {
         for (i = 0; i < 10; i++) {
-            P2 = seg_codes[i];  // Output to P2.0–P2.6
-            delay_ms(50);     // 1 second delay
+            P2 = seg_codes[i];  // Output to P2.0â€“P2.6
+            delay_ms(50);     // delay
         }
     }
 }
